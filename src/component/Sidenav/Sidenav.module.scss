@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #b1b1b1;
+  width: 15%;
+  height: 100vh;
+  transition:
+    width 0.5s ease,
+    min-width 0.5s ease;
+  overflow: hidden;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    position: absolute;
+    height: 100vh;
+    z-index: 12;
+    width: 100vw;
+  }
+}
+
+.closed {
+  width: 0;
+  min-width: 0;
+
+  .label {
+    display: none;
+  }
+
+  .logoText {
+    display: none;
+  }
+}
+
+.logo {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .logoText {
+    font-weight: 700;
+    font-size: 5rem;
+    color: #2563eb;
+  }
+
+  .closeSidenavBtn {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+
+.nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
