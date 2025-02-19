@@ -25,7 +25,7 @@ const Sidenav = memo(() => {
       </div>
       <nav className={styles.nav}>
         {navConfig.map((navItem) => (
-          <NavItem path={navItem.path} onClick={onSidenavItemClick}>
+          <NavItem key={navItem.path} path={navItem.path} onClick={onSidenavItemClick}>
             {navItem.icon}
             <span className={styles.label}>{navItem.title}</span>
           </NavItem>
