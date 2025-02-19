@@ -3,8 +3,8 @@ import { GlobalStateContext } from './context';
 import { GlobalStateProviderProps } from './types';
 
 export const GlobalStateProvider: React.FC<GlobalStateProviderProps> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isOpen, setIsOpen] = useState<boolean>(!isMobile);
 
   useEffect(() => {
     const handleResize = () => {
